@@ -243,7 +243,18 @@ These customer segments can help the business:
 ### ⭐ SmartCart Clustering Project ⭐
 
 **Machine Learning • Customer Analytics • Business Intelligence**
+</div>
+---
 
-Made by **[Sayan](https://www.linkedin.com/in/sayanpal04?utm_source=share_via&utm_content=profile&utm_medium=member_android)**
+<div align="center">
+
+## 👨‍💻 Made with ❤️ by Sayan Pal
+
+🎓 **MCA Student @ KIIT University**  
+🤖 **AI | Machine Learning | Data Science**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sayan%20Pal-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sayanpal04/)
+
+⭐ If you enjoyed this project, don't forget to **Star** this repository!
 
 </div>
