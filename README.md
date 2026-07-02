@@ -244,7 +244,6 @@ These customer segments can help the business:
 
 **Machine Learning • Customer Analytics • Business Intelligence**
 </div>
----
 
 <div align="center">
 
