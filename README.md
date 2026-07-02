@@ -79,43 +79,7 @@ Based on the visualization results, **Agglomerative Clustering** produces more c
 
 ## 🔄 Machine Learning Workflow
 
-```text
-📂 Load Dataset
-        │
-        ▼
-🧹 Data Cleaning
-        │
-        ▼
-⚙️ Feature Engineering
-        │
-        ▼
-📊 Exploratory Data Analysis
-        │
-        ▼
-🚫 Outlier Removal
-        │
-        ▼
-🔄 One-Hot Encoding
-        │
-        ▼
-📏 Feature Scaling
-        │
-        ▼
-📉 PCA
-        │
-        ▼
-🎯 Find Best K
-        │
-        ▼
-🤖 K-Means        🌳 Agglomerative
-        │                │
-        └───────┬────────┘
-                ▼
-        📈 Cluster Analysis
-                │
-                ▼
-        💡 Business Insights
-```
+📂 Load Dataset → 🧹 Data Cleaning → ⚙️ Feature Engineering → 📊 Exploratory Data Analysis → 🚫 Outlier Removal → 🔄 One-Hot Encoding → 📏 Feature Scaling → 📉 PCA → 🎯 Find Best K → 🤖 K-Means / 🌳 Agglomerative → 📈 Cluster Analysis → 💡 Business Insights
 
 ---
 
@@ -145,9 +109,7 @@ Missing `Income` values are imputed with the median, and the dataset is inspecte
 <img src="https://img.icons8.com/fluency/96/data-configuration.png" width="70">
 </p>
 
-```python
-df["Income"] = df["Income"].fillna(df["Income"].median())
-```
+`df["Income"] = df["Income"].fillna(df["Income"].median())`
 
 ### 2️⃣ Feature Engineering
 
@@ -175,10 +137,8 @@ New, business-meaningful features are engineered from the raw columns:
 
 A **pair plot** across `Income`, `Recency`, `Response`, `Age`, `Total_Spending`, and `Total_Children` reveals extreme income and age outliers.
 
-```python
-df_cleaned = df_cleaned[(df_cleaned["Age"] < 90)]
-df_cleaned = df_cleaned[(df_cleaned["Income"] < 600_000)]
-```
+`df_cleaned = df_cleaned[(df_cleaned["Age"] < 90)]`
+`df_cleaned = df_cleaned[(df_cleaned["Income"] < 600_000)]`
 
 > **Result:** Data size reduced from **2,240 → 2,236** records after outlier removal.
 
@@ -194,15 +154,7 @@ Categorical columns (`Education`, `Living_With`) are transformed with `OneHotEnc
 <img src="https://img.icons8.com/fluency/96/3d-select-tool.png" width="70">
 </p>
 
-Both a **2D** and **3D** PCA projection are generated to visualize the customer feature space:
-
-```python
-pca = PCA(n_components=3)
-X_pca = pca.fit_transform(X_scaled)
-# explained_variance_ratio_ ≈ [0.232, 0.114, 0.104]
-```
-
-The first three principal components together explain roughly **45%** of the total variance — enough to reveal clear structure in the data.
+Both a **2D** and **3D** PCA projection are generated to visualize the customer feature space. The first three principal components together explain roughly **45%** of the total variance (`≈ [0.232, 0.114, 0.104]`) — enough to reveal clear structure in the data.
 
 ### 7️⃣ Finding the Optimal Number of Clusters
 
@@ -291,5 +243,7 @@ These customer segments can help the business:
 ### ⭐ SmartCart Clustering Project ⭐
 
 **Machine Learning • Customer Analytics • Business Intelligence**
+
+Made by **[Sayan](https://www.linkedin.com/in/sayanpal04?utm_source=share_via&utm_content=profile&utm_medium=member_android)**
 
 </div>
